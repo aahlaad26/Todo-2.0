@@ -1,0 +1,159 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #ECEE81; /* Light gray background */
+    color: #333; /* Dark text color */
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Increased gap for better spacing */
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Increased gap for better spacing */
+  }
+  
+  .btn {
+    background: #82A0D8; /* Blue button background color */
+    border: none;
+    color: #fff; /* White button text color */
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth button hover transition */
+  }
+  
+  .btn:hover,
+  .btn:focus-visible {
+    background: #0056b3; /* Darker blue on hover/focus */
+  }
+  
+  .btn.btn-danger {
+    background: #dc3545; /* Red button background color */
+    border: none;
+    color: #fff; /* White button text color */
+  }
+  
+  .btn.btn-danger:hover,
+  .btn.btn-danger:focus-visible {
+    background: #c82333; /* Darker red on hover/focus */
+  }
+  
+  .new-item-form input {
+    outline: none;
+    border: 1px solid #82A0D8; 
+    background: #ECEE81; 
+    border-radius: 0.25em;
+    padding: 0.5em 1em;
+    color: #333; /* Dark text color */
+  }
+  
+  .new-item-form input:focus {
+    border-color: #82A0D8; /* Blue border on focus */
+  }
+  
+  .header {
+    font-size: 2rem; /* Larger header text */
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Increased margin for better spacing */
+  }
+  
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .list li:has(input:checked) label {
+    color: #007bff; /* Blue text for checked items */
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Increased gap for better spacing */
+  }
+  
+  .list li {
+    display: flex;
+    gap: 1rem; /* Increased gap for better spacing */
+    align-items: center;
+  }
+  
+  .list li label {
+    display: flex;
+    gap: 0.5rem; /* Increased gap for better spacing */
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .list li:has(input:focus-visible) label {
+    outline: 1px solid #007bff; /* Blue outline on focus */
+  }
+  
+  .list li input {
+    outline: none;
+    background: #ECEE81;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  .list li label::before {
+    content: "";
+    display: block;
+    width: 1.2rem; /* Slightly larger checkbox */
+    height: 1.2rem; /* Slightly larger checkbox */
+    background: #ECEE81;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .list li label:hover::before {
+    background: #f0f0f0; /* Light gray on hover */
+  }
+  
+  .list li:has(input:checked) label::before {
+    content: "✔";
+    background: #007bff; /* Blue checkmark for checked items */
+    color: #fff; /* White checkmark color */
+    font-size: 1rem; /* Slightly larger checkmark */
+    font-weight: bold;
+  }
+  
+  .list li:has(input:checked) label:hover::before {
+    background: #0056b3; /* Darker blue on hover */
+  }
+    .card {
+      background: #EDB7ED; /* Light gray background for the card */
+      border: 1px solid #e0e0e0; /* Light gray border */
+      border-radius: 0.5rem; /* Rounded corners for the card */
+      padding: 1.5rem; /* Padding inside the card */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+      margin-bottom: 2rem; /* Spacing between cards */
+    }
+
+    /* Custom colored scheme for the card header */
+    .card-header {
+      background: #82A0D8; /* Blue header background */
+      color: #fff; /* White text color for the header */
+      padding: 1rem; /* Padding inside the header */
+      border-top-left-radius: 0.5rem; /* Rounded top-left corner for the header */
+      border-top-right-radius: 0.5rem; /* Rounded top-right corner for the header */
+    }
