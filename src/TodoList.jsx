@@ -1,6 +1,6 @@
 import { TodoItem } from "./TodoItem"
 
-export function TodoList({ todo, deleteTodo ,toggleTodo }) {
+export function TodoList({ todo, deleteTodo ,toggleTodo ,editTodo}) {
 
     return (
         <><h1 className="header">Todo-list</h1>
@@ -14,6 +14,7 @@ export function TodoList({ todo, deleteTodo ,toggleTodo }) {
                         deleteTodo={deleteTodo} 
                         completed={currentTodos.completed}
                         toggleTodo={toggleTodo}
+                        editTodo={editTodo}
                         />
                     )
                 })}
